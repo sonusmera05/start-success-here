@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepMaster | NEET & JEE Excellence Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Prep<span>Master</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="prospectus.html">Prospectus</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#test-series">Test Series</a></li>
+                <li><a href="#pyq">PYQs</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="login-btn" onclick="openLoginModal()">Student Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <span class="badge">Trusted by Top NEET & JEE Aspirants</span>
+            <h1>Your NEET & JEE Success Starts Here</h1>
+            <p>Experience high-engagement test simulations, rigorous study environments, and structured preparation designed to maximize your rank.</p>
+            <div class="hero-btns">
+                <a href="#test-series" class="btn btn-primary">Explore Test Series</a>
+                <a href="prospectus.html" class="btn btn-secondary">Digital Prospectus</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Running Video Showcase Section -->
+    <section class="environment-section">
+        <div class="section-header">
+            <h2>Life at PrepMaster - Live Action</h2>
+            <p>Watch how our students maintain deep focus in a disciplined test environment</p>
+        </div>
+        <div class="video-container-box">
+            <video autoplay loop muted playsinline class="running-test-video">
+                <!-- यहाँ बाद में अपनी वीडियो फाइल का नाम जैसे 'test-session.mp4' डाल सकते हैं -->
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay-text">
+                <div class="play-pulse">▶</div>
+                <p>Live Classroom & Test Simulation View</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Series Grid -->
+    <section class="main-container" id="test-series">
+        <div class="section-header">
+            <h2>Featured Test Series</h2>
+            <p>Select your target exam and class level</p>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterClass('all', event)">All Tests</button>
+            <button class="tab-btn" onclick="filterClass('11th', event)">Class 11th</button>
+            <button class="tab-btn" onclick="filterClass('12th', event)">Class 12th</button>
+        </div>
+
+        <div class="card-grid">
+            <div class="card 11th">
+                <div class="card-tag neet">NEET 2027</div>
+                <h3>Class 11 Physics Mock 01</h3>
+                <p>Mechanics, Kinematics & Laws of Motion</p>
+                <div class="card-info">
+                    <span>⏱️ 180 Mins</span>
+                    <span>📝 180 Questions</span>
+                </div>
+                <button class="start-btn" onclick="startTest('Class 11 Physics Mock 01')">Start Test</button>
+            </div>
+
+            <div class="card 12th">
+                <div class="card-tag jee">JEE 2026</div>
+                <h3>Class 12 Maths Full Syllabus</h3>
+                <p>Calculus, Algebra & 3D Geometry</p>
+                <div class="card-info">
+                    <span>⏱️ 180 Mins</span>
+                    <span>📝 90 Questions</span>
+                </div>
+                <button class="start-btn" onclick="startTest('Class 12 Maths Full Test')">Start Test</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PYQ Section -->
+    <section class="pyq-section" id="pyq">
+        <div class="section-header">
+            <h2>Previous Year Questions (PYQs)</h2>
+            <p>Free sample papers and solutions for practice</p>
+        </div>
+        <div class="pyq-list">
+            <div class="pyq-item">
+                <div>
+                    <h4>NEET 2024 Question Paper with Solutions</h4>
+                    <span>PDF • Physics, Chemistry, Biology</span>
+                </div>
+                <button class="download-btn" onclick="alert('Downloading sample PDF...')">Download</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+            <h3 id="modalTitle">Student Portal Login</h3>
+            
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label for="userContact">Mobile Number or Email ID</label>
+                    <input type="text" id="userContact" required placeholder="Enter mobile or email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="submit-btn">Login to Portal</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PrepMaster Portal. Built for Excellence.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
